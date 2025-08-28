@@ -195,14 +195,67 @@ body{
 
 /* ====== Start of Profile Section ====== */
 .profileSection{
-  padding: 20px;
+  background-image: url(https://www3.intercape.co.za/images/top_bg_mobile.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 240px;
   background-color: var(--secondary-color);
-  border-radius: 12px;
-  box-shadow: 5px 4px 20px rgba(0, 0, 0, 0.4);
-  margin: 20px 0;
+  min-height: 600px;
+  text-align: center;
+  color: var(--accent-color);
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  h3{
+    margin-top: 286px;
+    font-size: 25px;
+    color: var(--primary-color);
+  }
+  h4{
+    font-size: 15px;
+    font-weight: 600;
+  }
+  p{
+    font-size: 13px;
+    font-weight: 500;
+  }
 }
 
+.inputFieldProfile{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #797979ff;
+  border-radius: 4.5px;
+  color: var(--primary-color);
+  margin: 0;
+  box-sizing: border-box;
 
+  &:focus{
+    outline: none;
+    border: 1px solid var(--primary-color);
+  }
+}
+
+.getStartedProfileBtn{
+  margin-top: 20px;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 35px;
+  padding: 12px;
+}
+
+.loyaltyProgramme{
+  margin-top: 20px;
+  text-align: left;
+  color: #7467ee;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
 /* ====== End of Profile Section ====== */
 
@@ -212,7 +265,6 @@ body{
 .heroFooter{
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
   padding: 10px 0;
   border-top: 1px solid #ccc;
   height: 70px;

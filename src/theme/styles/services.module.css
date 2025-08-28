@@ -1,0 +1,26 @@
+:root{
+    --primary-color: #f37728;
+    --secondary-color: #fff;
+    --accent-color: #000;
+}
+
+.servicesDiv{
+    font-family: roboto, sans-serif;
+    font-weight: 600;
+}
+
+.serviceCard{
+    min-height: 150px;
+    border-radius: 25px;  
+    background-color: green;
+    text-align: center;
+    padding: 50px 30px;
+}
+.leanText{
+    display: inline-block;
+    transform: skewX(-10deg);
+}
+
+.serviceTitle{
+    
+}
