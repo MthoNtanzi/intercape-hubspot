@@ -11,7 +11,7 @@ import styles from '../../../styles/hero.module.css';
 
 const RouteSearch = () => {
   return (
-    <form className={styles.travelForm} style={{ display: 'none' }} id='route-search-form'>
+    <form className={styles.travelForm} id='route-search-form'>
           <h1>Route Search</h1>
           <div className={styles.travelFormWrapper}>
             {/* Travelling From */}

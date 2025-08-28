@@ -9,13 +9,40 @@
     font-weight: 600;
 }
 
-.serviceCard{
-    min-height: 150px;
-    border-radius: 25px;  
-    background-color: green;
-    text-align: center;
-    padding: 50px 30px;
+.carouselDivs {
+  display: flex;
+  overflow: hidden;
+  width: calc(100% - 40px);
+  padding: 20px;
+  gap: 20px;
 }
+
+.carouselTrack {
+  display: flex;
+  animation: scroll 80s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* Move half (because of duplicated set) */
+  }
+}
+
+.serviceCard {
+  min-height: 150px;
+  width: 700px;
+  border-radius: 25px;
+  background-color: green;
+  text-align: center;
+  padding: 50px 30px;
+  flex-shrink: 0;
+  margin: 0 20px;
+}
+
+
 .leanText{
     display: inline-block;
     transform: skewX(-10deg);
