@@ -1,0 +1,84 @@
+:root{
+    --primary-color: #f37728;
+    --secondary-color: #fff;
+    --accent-color: #000;
+}
+
+.findBusContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 450px;
+    background-image:url('https://www.intercape.co.za/wp-content/uploads/2023/02/Bus-Stop_Background2.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.leftSide {
+    background-image: url('https://www.intercape.co.za/wp-content/uploads/2023/02/Find-a-Stop2.png');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+
+.rightSide {
+    flex: 1;
+    text-align: center;
+    h2{
+        display: inline-flex;
+        background-color: var(--accent-color);
+        color: var(--secondary-color);
+        padding: 12px 20px;
+        border-radius: 34px;
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+.findBusForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    background-color: var(--secondary-color);
+    border-radius: 35px;
+    padding: 30px;
+    width: 80%;
+
+    text-transform: uppercase;
+
+    h3{
+        font-size: 48px;
+        font-weight: bold;
+        color: transparent;          /* fill color */
+        -webkit-text-stroke: 2px var(--primary-color); /* outline width & color */
+        margin: 0;
+    }
+    h4{
+        font-size: 48px;
+        font-weight: bold;
+        color: var(--accent-color);
+        margin: 0 0 20px 0;
+    }
+}
+
+
+.citySelect{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #797979ff;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    &:focus{
+        outline: none;
+        border: 1px solid var(--primary-color);
+    }
+}
+
+.submitButton{
+
+}

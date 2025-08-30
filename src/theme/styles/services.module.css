@@ -4,6 +4,8 @@
     --accent-color: #000;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
 .servicesDiv{
     font-family: roboto, sans-serif;
     font-weight: 600;
@@ -11,15 +13,45 @@
 
 .carouselDivs {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   overflow: hidden;
   width: calc(100% - 40px);
   padding: 20px;
   gap: 20px;
+  background-image: url('https://www.intercape.co.za/wp-content/uploads/2023/01/circle-bg-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.offerTitle{
+  font-size: 110px;
+  margin-block: 10px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.servicesTitle{
+  font-size: 90px;
+  font-weight: 300;
+  font-family: 'Caveat', cursive;
+  display: inline-block;
+  font-family: 'Dancing Script', cursive;
+  transform: skewX(-35deg);
+  margin-top: -120px;
+  margin-bottom: 10px;
+  color: var(--accent-color);
 }
 
 .carouselTrack {
   display: flex;
-  animation: scroll 80s linear infinite;
+  animation: scroll 50s linear infinite;
+  padding-block: 50px;
+}
+
+.carouselTrack:hover  {
+  animation-play-state: paused;
 }
 
 @keyframes scroll {
@@ -33,13 +65,14 @@
 
 .serviceCard {
   min-height: 150px;
-  width: 700px;
+  width: 450px;
   border-radius: 25px;
-  background-color: green;
+  background-color: #333333;
   text-align: center;
-  padding: 50px 30px;
+  padding: 40px 30px;
   flex-shrink: 0;
   margin: 0 20px;
+  color: var(--secondary-color);
 }
 
 
@@ -49,5 +82,28 @@
 }
 
 .serviceTitle{
-    
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.serviceDescription{
+  font-weight: 600;
+  letter-spacing: 0.07rem;
+  word-spacing: 0.3rem;
+}
+
+.serviceButton{
+  margin-top: 20px;
+  border-radius: 25px;
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.serviceButton:hover{
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

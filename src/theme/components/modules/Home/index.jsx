@@ -20,6 +20,8 @@ import Services from './services';
 import RouteSearch from './RouteSearch';
 import TicketSection from './TicketSection';
 import ProfileSection from './ProfileSection';
+import Features from './Features';
+import FindBus from './FindBus';
 
 export function Component({ fieldValues, hublParameters }) {
   const { src, alt, width, height } = fieldValues.logo;
@@ -78,6 +80,8 @@ export function Component({ fieldValues, hublParameters }) {
       </div>
     </div>
     <Services />
+    <Features />
+    <FindBus />
   </>);
 }
 

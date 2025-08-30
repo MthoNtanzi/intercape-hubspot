@@ -38,6 +38,8 @@ export default function Services() {
 
     return (
         <div className={styles.carouselDivs}>
+            <h3 className={styles.offerTitle}>We Offer</h3>
+            <h4 className={`${styles.servicesTitle}`}>Services</h4>
             <div className={styles.carouselTrack}>
                 {services.concat(services).map((service, index) => (
                     <div className={styles.serviceCard} key={index}>
