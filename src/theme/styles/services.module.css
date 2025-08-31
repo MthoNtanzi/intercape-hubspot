@@ -46,7 +46,7 @@
 
 .carouselTrack {
   display: flex;
-  animation: scroll 50s linear infinite;
+  animation: scroll 30s linear infinite;
   padding-block: 50px;
 }
 

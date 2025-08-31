@@ -1,0 +1,57 @@
+.loyaltyProgramme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.offerTitle{
+  font-size: 90px;
+  margin-block: 10px;
+  color: var(--primary-color);
+  /* margin-left: -80px; */
+  margin: auto;
+  text-transform: uppercase;
+}
+
+.featureTitle{
+  font-size: 80px;
+  font-weight: 300;
+  font-family: 'Caveat', cursive;
+  display: inline-block;
+  font-family: 'Dancing Script', cursive;
+  transform: skewX(-35deg);
+  width: calc(100% - 700px);
+  margin-top: -80px;
+  margin-bottom: 10px;
+  margin-inline: auto;
+  /* margin-left: -100px; */
+  color: var(--accent-color);
+}
+
+.carouselTrack {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  padding-block: 50px;
+}
+
+.carouselTrack:hover  {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* Move half (because of duplicated set) */
+  }
+}
+
+.partnerLogo {
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  margin-inline: 20px;
+}

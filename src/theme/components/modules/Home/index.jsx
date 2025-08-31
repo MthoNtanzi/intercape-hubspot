@@ -22,6 +22,9 @@ import TicketSection from './TicketSection';
 import ProfileSection from './ProfileSection';
 import Features from './Features';
 import FindBus from './FindBus';
+import WhoAreWe from './whoAreWe';
+import LoyaltyProgramme from './LoyaltyProgramme';
+import BookAt from './BookAt';
 
 export function Component({ fieldValues, hublParameters }) {
   const { src, alt, width, height } = fieldValues.logo;
@@ -82,6 +85,9 @@ export function Component({ fieldValues, hublParameters }) {
     <Services />
     <Features />
     <FindBus />
+    <WhoAreWe />
+    <LoyaltyProgramme />
+    <BookAt />
   </>);
 }
 
