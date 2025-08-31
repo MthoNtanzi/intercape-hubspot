@@ -5,17 +5,12 @@ import {
   ImageField,
 } from '@hubspot/cms-components/fields';
 import { RichText } from '@hubspot/cms-components';
+
+// Image Import
 import logo from '../../../assets/sprocket.svg';
 import styles from '../../../styles/hero.module.css';
-import entertainmentBanner from '../../../assets/hero/IC_On_Board_Entertainment_Landing_Page_Banner1.webp';
-import slider01 from '../../../assets/hero/IC_WEBSITE-SLIDERS-01.png';
-import slider02 from '../../../assets/hero/IC_WEBSITE-SLIDERS-02.png';
-import appBanner from '../../../assets/hero/Intercape-App-Banner.png';
-import banner2 from '../../../assets/hero/Intercape-Banner-2.png';
-import loyaltyBanner from '../../../assets/hero/thumbnail_IC_Loyalty_Card_Banner-cropped.png';
-import payflexBanner from '../../../assets/hero/thumbnail_IC_Payflex_web_banner.png';
-import topBg from '../../../assets/hero/top_bg_1400.jpg';
-import topBgMob from '../../../assets/hero/top_bg_mobile.jpg';
+
+// Component Import
 import Services from './services';
 import RouteSearch from './RouteSearch';
 import TicketSection from './TicketSection';
@@ -33,7 +28,42 @@ export function Component({ fieldValues, hublParameters }) {
   return (<>
     <div className={styles.hero}>
       <div className={styles.swiperWrapper}>
-        <img src={slider01} alt="Slider 1" width="100%" height="100%" />
+        {[
+          { 
+            src: "https://www.intercape.co.za/wp-content/uploads/2023/11/IC_WEBSITE-SLIDERS-01-1.jpg",
+            alt: "Book your tickets online"
+          },
+          { 
+            src: "https://www.intercape.co.za/wp-content/uploads/2023/11/IC_WEBSITE-SLIDERS-02-1.jpg",
+            alt: "Special offers and promotions"
+          },
+          { 
+            src: "https://www.intercape.co.za/wp-content/uploads/2024/02/IC_On_Board_Entertainment_Landing_Page_Banner1-1.webp",
+            alt: "On-board entertainment system"
+          },
+          { 
+            src: "https://www.intercape.co.za/wp-content/uploads/2023/11/Intercape-App-Banner-1.jpg",
+            alt: "Download the Intercape mobile app"
+          },
+          { 
+            src: "https://www.intercape.co.za/wp-content/uploads/2023/11/IC_Loyalty_Card_Banner-1.jpg",
+            alt: "Join our loyalty programme"
+          },
+          { 
+            src: "https://www.intercape.co.za/wp-content/uploads/2023/11/IC_Payflex_web_banner.jpg",
+            alt: "Pay with Payflex - Buy now, pay later"
+          }
+        ].map((image, index) => (
+          <div key={index} className={styles.slide}>
+            <img 
+              src={image.src} 
+              alt={image.alt} 
+              width="100%" 
+              height="100%" 
+              loading={index === 0 ? "eager" : "lazy"}
+            />
+          </div>
+        ))}
       </div>
       <div className={styles.formDiv}>
 

@@ -1,3 +1,12 @@
 {
-  "label": "intercape"
+  "label": "intercape",
+  "preview_path": "./templates/landingPage.hubl.html",
+  "screenshot_path": "./assets/templates/screenshot.png",
+  "enable_domain_stylesheets": false,
+  "author": {
+    "name": "Mthobisi Ntanzi",
+    "email": "mthontanzi99@gmail.com",
+    "url": "https://theme-provider.com/"
+  },
+  "is_available_for_new_content": true
 }
