@@ -1,0 +1,12 @@
+:root{
+    --primary-color: #f37728;
+    --secondary-color: #fff;
+    --accent-color: #000;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: DMSans, sans-serif;
+}

@@ -9,7 +9,7 @@ import styles from '../../../styles/hero.module.css';
 
 export default function Services() {
     return (
-        <form className={styles.profileSection}>
+        <form className={styles.profileSection} style={{ display: 'none' }}>
             <h3>Log In or Create Account</h3>
             <h4>Lets find your account</h4>
             <p>Enter your cellphone number or email to sign in or create a new account. Click 'Get Started' to continue.</p>

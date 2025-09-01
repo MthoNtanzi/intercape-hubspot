@@ -1,0 +1,33 @@
+:root{
+    --primary-color: #f37728;
+    --secondary-color: #fff;
+    --accent-color: #000;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: DMSans, sans-serif;
+}
+
+.container{
+    height: 400px;
+    margin: 0 auto;
+    background-image: url('https://www.intercape.co.za/wp-content/uploads/2025/08/IC_Loyalty_Program_Phase_3_Web_Background.webp');
+
+    display: flex;
+
+    img{
+        width: 500px;
+        height: auto;
+    }
+}
+
+.leftSide{
+
+    flex: 1;
+}
+.rightSide{
+    flex: 1;
+}

@@ -9,7 +9,7 @@ import styles from '../../../styles/hero.module.css';
 
 export default function Services() {
     return (
-        <div className={styles.ticketsSection}>
+        <div className={styles.ticketsSection} style={{ display: 'none' }}>
             <h1>My Tickets</h1>
             <div className={styles.ticketView}>
                 <button className={styles.viewTicketsBtn}>Current & Future</button>

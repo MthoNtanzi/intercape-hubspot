@@ -1,8 +1,7 @@
 import {
   ModuleFields,
   TextField,
-  RichTextField,
-  ImageField,
+  RichTextField
 } from '@hubspot/cms-components/fields';
 import { RichText } from '@hubspot/cms-components';
 
@@ -22,48 +21,53 @@ import LoyaltyProgramme from './LoyaltyProgramme';
 import BookAt from './BookAt';
 
 export function Component({ fieldValues, hublParameters }) {
-  const { src, alt, width, height } = fieldValues.logo;
   const { brandColors } = hublParameters;
 
-  return (<>
-    <div className={styles.hero}>
-      <div className={styles.swiperWrapper}>
-        {[
+  const swiperArray = [
           { 
-            src: "https://www.intercape.co.za/wp-content/uploads/2023/11/IC_WEBSITE-SLIDERS-01-1.jpg",
+            src: "https://www.intercape.co.za/wp-content/uploads/2025/06/IC_On_Board_Entertainment_Landing_Page_Banner1.webp",
             alt: "Book your tickets online"
           },
           { 
-            src: "https://www.intercape.co.za/wp-content/uploads/2023/11/IC_WEBSITE-SLIDERS-02-1.jpg",
+            src: "https://www.intercape.co.za/wp-content/uploads/2025/06/IC_WEBSITE-SLIDERS-01.png",
             alt: "Special offers and promotions"
           },
           { 
-            src: "https://www.intercape.co.za/wp-content/uploads/2024/02/IC_On_Board_Entertainment_Landing_Page_Banner1-1.webp",
+            src: "https://www.intercape.co.za/wp-content/uploads/2025/06/IC_WEBSITE-SLIDERS-02.png",
             alt: "On-board entertainment system"
           },
           { 
-            src: "https://www.intercape.co.za/wp-content/uploads/2023/11/Intercape-App-Banner-1.jpg",
+            src: "https://www.intercape.co.za/wp-content/uploads/2025/06/Intercape-App-Banner.png",
             alt: "Download the Intercape mobile app"
           },
           { 
-            src: "https://www.intercape.co.za/wp-content/uploads/2023/11/IC_Loyalty_Card_Banner-1.jpg",
+            src: "https://www.intercape.co.za/wp-content/uploads/2025/06/Intercape-Banner-2.png",
             alt: "Join our loyalty programme"
           },
           { 
-            src: "https://www.intercape.co.za/wp-content/uploads/2023/11/IC_Payflex_web_banner.jpg",
+            src: "https://www.intercape.co.za/wp-content/uploads/2025/06/thumbnail_IC_Payflex_web_banner.png",
             alt: "Pay with Payflex - Buy now, pay later"
           }
-        ].map((image, index) => (
-          <div key={index} className={styles.slide}>
-            <img 
-              src={image.src} 
-              alt={image.alt} 
-              width="100%" 
-              height="100%" 
-              loading={index === 0 ? "eager" : "lazy"}
-            />
-          </div>
-        ))}
+        ];
+
+  return (<>
+    <div className={styles.hero}>
+      
+      <div className={styles.swiperWrapper}> 
+        <div className={styles.swiperCarousel}> 
+          {swiperArray.map((image, index) => ( 
+            <div key={index} className={styles.imageDiv}> 
+              <img 
+                src={image.src} 
+                alt={image.alt} 
+                // className={styles.slide} 
+                width="100%"
+                height="100%"
+                loading={index === 0 ? "eager" : "lazy"} /> 
+
+            </div> 
+          ))} 
+        </div> 
       </div>
       <div className={styles.formDiv}>
 
@@ -133,12 +137,7 @@ const richTextFieldDefaultValue = `
 
 export const fields = (
   <ModuleFields>
-    <ImageField
-      name="logo"
-      label="Logo"
-      default={{ src: logo, height: 100, alt: 'HubSpot logo' }}
-      resizable={true}
-    />
+    
     <TextField
       name="headline"
       label="Headline"

@@ -4,21 +4,25 @@ import {
   RichTextField,
   ImageField,
 } from '@hubspot/cms-components/fields';
-import { RichText } from '@hubspot/cms-components';
+
+import Hero from './Hero';
 
 // Image Import
 import logo from '../../../assets/sprocket.svg';
+import React from 'react';
+import styles from '../../../styles/default.module.css';
 
 
 
 
-export function Component({ fieldValues, hublParameters }) {
-  const { src, alt, width, height } = fieldValues.logo;
-  const { brandColors } = hublParameters;
+export function Component() {
 
-  return (<>
-    <h1>Hello World</h1>
-  </>);
+  return (
+    <div className={styles.container}>
+      <Hero />
+      <h1>Hello World</h1>
+    </div>
+  );
 }
 
 const richTextFieldDefaultValue = `
